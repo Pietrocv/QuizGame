@@ -7,14 +7,24 @@ import questions from '../data/questions'
 
 const STAGES  = ["Start", "Playing", "End"]
 
-const inicialSTATE = {
+const inicialState = {
     gameStage: STAGES[0],
     questions
+}
+
+const quizReducer = (state, action) => {
+    console.log(state, action)
+    switch(action.type){
+        case "CHANGE_STATE":
+            return state
+        default:
+            return state
+    }
 }
 
 export const QuizContext = createContext()
 
 export const QuizProvider = ({children}) => {
-    const value = { name: 'Quiz'}
+    const value = useReducer(quizReducer, inicialState)
     return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>
 }
