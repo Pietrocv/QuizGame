@@ -15,8 +15,10 @@ const inicialState = {
 const quizReducer = (state, action) => {
     console.log(state, action)
     switch(action.type){
-        case "CHANGE_STATE":
-            return state
+        case "CHANGE_STATE": 
+            return {
+                gameStage: STAGES[1]
+            }
         default:
             return state
     }
