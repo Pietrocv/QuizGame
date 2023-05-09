@@ -8,7 +8,13 @@ const Questions = () => {
   console.log(quizState)
 
   return (
-    <div>Questions</div>
+    <div>
+     <p>Pergunta 0 de 10</p>
+     <h2>pergunta Atual</h2>
+     <div id="opttions-container">
+      <p>Opções</p>
+     </div>
+    </div>
   )
 }
 
