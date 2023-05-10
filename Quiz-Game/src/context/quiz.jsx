@@ -10,7 +10,7 @@ const STAGES  = ["Start", "Playing", "End"]
 const inicialState = {
     gameStage: STAGES[0],
     questions,
-    currentQuestion: 1,
+    currentQuestion: 0,
 }
 
 const quizReducer = (state, action) => {
@@ -21,6 +21,9 @@ const quizReducer = (state, action) => {
                 ...state,
                 gameStage: STAGES[1],
             }
+        case "REORDER_QUESTIONS":
+            console.log("Embaralhou")
+            return state
         default:
             return state
     }
