@@ -9,7 +9,7 @@ const Questions = () => {
 
   return (
     <div id='question'>
-     <p>Pergunta 0 de 10</p>
+     <p>Pergunta {quizState.currentQuestion} de {quizState.questions.length}</p>
      <h2>pergunta Atual</h2>
      <div id="opttions-container">
       <p>Opções</p>
